@@ -1,0 +1,35 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.706061",
+   "Default View_TopLeft":"-336,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_Clk_0 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus counter_0 -pg 1 -lvl 3 -x 740 -y 460 -defaultsOSRD
+preplace portBus Data_output_0 -pg 1 -lvl 3 -x 740 -y 590 -defaultsOSRD
+preplace portBus data_output_1 -pg 1 -lvl 3 -x 740 -y 520 -defaultsOSRD
+preplace portBus Data_Output_2 -pg 1 -lvl 3 -x 740 -y 160 -defaultsOSRD
+preplace portBus data_Output_3 -pg 1 -lvl 3 -x 740 -y 340 -defaultsOSRD
+preplace inst IntToFloat_0 -pg 1 -lvl 1 -x 190 -y 80 -defaultsOSRD
+preplace inst FloatMultiRange_0 -pg 1 -lvl 2 -x 560 -y 240 -defaultsOSRD
+preplace inst FloatMultiplikation_0 -pg 1 -lvl 1 -x 190 -y 240 -defaultsOSRD
+preplace inst FloatToInt_0 -pg 1 -lvl 2 -x 560 -y 590 -defaultsOSRD
+preplace inst DegreeToBinary_0 -pg 1 -lvl 1 -x 190 -y 410 -defaultsOSRD
+preplace inst Sumering_0 -pg 1 -lvl 2 -x 560 -y 430 -defaultsOSRD
+preplace netloc Clk_0_1 1 0 2 20 320 380
+preplace netloc FloatMultiRange_0_Data_Output 1 0 3 30 160 NJ 160 720
+preplace netloc FloatMultiRange_0_Data_ready_out 1 0 3 30 330 NJ 330 720
+preplace netloc FloatMultiplikation_0_Data_Output 1 1 1 370 230n
+preplace netloc FloatMultiplikation_0_Data_ready_out 1 1 1 360 250n
+preplace netloc FloatToInt_0_Data_output 1 2 1 NJ 590
+preplace netloc IntToFloat_0_Data_output 1 1 1 400 70n
+preplace netloc IntToFloat_0_Data_ready_out 1 1 1 390 90n
+preplace netloc Kalddethvadduharlyst_0_data_output 1 1 2 350 520 NJ
+preplace netloc Sumering_0_counter 1 2 1 NJ 460
+preplace netloc Sumering_0_data_Output 1 0 3 30 340 NJ 340 720
+levelinfo -pg 1 0 190 560 740
+pagesize -pg 1 -db -bbox -sgen -90 0 920 660
+"
+}
+0

@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu May 18 12:48:23 2023
+# Process ID: 40060
+# Current directory: C:/Users/gusta/Documents/Universitetet/P4-413/GyroData
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent38520 C:\Users\gusta\Documents\Universitetet\P4-413\GyroData\GyroData.xpr
+# Log file: C:/Users/gusta/Documents/Universitetet/P4-413/GyroData/vivado.log
+# Journal file: C:/Users/gusta/Documents/Universitetet/P4-413/GyroData\vivado.jou
+# Running On: LAPTOP-U9E9QN8R, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16542 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gusta/Documents/Universitetet/P4-413/GyroData/GyroData.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_module_reference GyroData_FloatMultiRange_0_0
+update_module_reference GyroData_FloatMultiplikation_0_0
+update_module_reference GyroData_FloatToInt_0_0
+update_module_reference GyroData_Kalddethvadduharlyst_0_0
+delete_bd_objs [get_bd_cells Kalddethvadduharlyst_0]
+create_bd_cell -type module -reference DegreeToBinary DegreeToBinary_0
+connect_bd_net [get_bd_pins Sumering_0/data_Output] [get_bd_pins DegreeToBinary_0/data_input]
+connect_bd_net [get_bd_ports Clk_0] [get_bd_pins DegreeToBinary_0/clk]
+connect_bd_net [get_bd_pins DegreeToBinary_0/data_output] [get_bd_pins FloatToInt_0/Data_input]
+regenerate_bd_layout
+save_bd_design
+update_compile_order -fileset sources_1
+close_bd_design [get_bd_designs GyroData]
+update_module_reference GyroData_DegreeToBinary_0_0
+update_module_reference GyroData_Sumering_0_0
+regenerate_bd_layout
+close_bd_design [get_bd_designs GyroData]
