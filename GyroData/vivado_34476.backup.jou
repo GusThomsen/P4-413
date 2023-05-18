@@ -1,0 +1,255 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri May 12 09:56:33 2023
+# Process ID: 34476
+# Current directory: C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18616 C:\Users\gusta\Documents\Universitetet\P4\Projekt\DataProcessingModule\Nyt lort\GyroData\GyroData.xpr
+# Log file: C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/vivado.log
+# Journal file: C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData\vivado.jou
+# Running On: LAPTOP-U9E9QN8R, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16542 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.xpr}
+update_compile_order -fileset sources_1
+set_property top FloatToInt [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+source FloatToInt.tcl
+add_force {/FloatToInt/Data_input} -radix hex {43320000 0ns}
+add_force {/FloatToInt/data_ready_in} -radix hex {1 0ns}
+add_force {/FloatToInt/clk} -radix bin {0 0ns} {1 50000ps} -repeat_every 100000ps
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation
+source FloatToInt.tcl
+add_force {/FloatToInt/Data_input} -radix hex {43320000 0ns}
+add_force {/FloatToInt/data_ready_in} -radix hex {1 0ns}
+add_force {/FloatToInt/clk} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+close_sim
+launch_simulation
+source FloatToInt.tcl
+add_force {/FloatToInt/Data_input} -radix hex {43320000 0ns}
+add_force {/FloatToInt/data_ready_in} -radix hex {1 0ns}
+add_force {/FloatToInt/clk} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+close_sim
+open_bd_design {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}
+create_bd_cell -type module -reference FloatToInt FloatToInt_0
+set_property location {3.5 1128 286} [get_bd_cells FloatToInt_0]
+close [ open {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/new/Kalddethvadduharlysttil.vhd} w ]
+add_files {{C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/new/Kalddethvadduharlysttil.vhd}}
+update_compile_order -fileset sources_1
+save_bd_design
+launch_simulation
+source FloatToInt.tcl
+update_compile_order -fileset sources_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+add_force {/FloatToInt/Data_input} -radix hex {43320000 0ns}
+add_force {/FloatToInt/data_ready_in} -radix hex {1 0ns}
+add_force {/FloatToInt/clk} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+add_force {/FloatToInt/Data_input} -radix hex {42aa0000 0ns}
+run 10 ns
+close_sim
+update_module_reference GyroData_FloatToInt_0_0
+close_bd_design [get_bd_designs GyroData]
+open_bd_design {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}
+create_bd_cell -type module -reference Kalddethvadduharlysttil Kalddethvadduharlyst_0
+set_property location {4 1260 140} [get_bd_cells Kalddethvadduharlyst_0]
+connect_bd_net [get_bd_pins Sumering_0/data_Output] [get_bd_pins Kalddethvadduharlyst_0/data_input]
+connect_bd_net [get_bd_ports Clk_0] [get_bd_pins Kalddethvadduharlyst_0/clk]
+connect_bd_net [get_bd_ports Clk_0] [get_bd_pins FloatToInt_0/clk]
+set_property location {4.5 1479 274} [get_bd_cells FloatToInt_0]
+connect_bd_net [get_bd_pins Kalddethvadduharlyst_0/data_output] [get_bd_pins FloatToInt_0/Data_input]
+connect_bd_net [get_bd_pins Kalddethvadduharlyst_0/data_ready_out] [get_bd_pins FloatToInt_0/data_ready_in]
+save_bd_design
+update_module_reference GyroData_Kalddethvadduharlyst_0_0
+update_module_reference GyroData_FloatToInt_0_0
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+startgroup
+make_bd_pins_external  [get_bd_pins FloatMultiRange_0/Data_input]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins FloatMultiRange_0/Data_ready_in]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Sumering_0/counter]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins FloatToInt_0/Data_output]
+endgroup
+regenerate_bd_layout
+set_property top GyroData_wrapper [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+save_bd_design
+generate_target Simulation [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}]
+export_ip_user_files -of_objects [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}}] -directory {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files} -ipstatic_source_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/modelsim} {questa=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/questa} {riviera=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/riviera} {activehdl=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+update_module_reference GyroData_FloatToInt_0_0
+generate_target Simulation [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}]
+export_ip_user_files -of_objects [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}}] -directory {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files} -ipstatic_source_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/modelsim} {questa=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/questa} {riviera=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/riviera} {activehdl=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+update_module_reference GyroData_Kalddethvadduharlyst_0_0
+generate_target Simulation [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}]
+export_ip_user_files -of_objects [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}}] -directory {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files} -ipstatic_source_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/modelsim} {questa=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/questa} {riviera=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/riviera} {activehdl=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source GyroData_wrapper.tcl
+add_force {/GyroData_wrapper/Clk_0} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/GyroData_wrapper/Data_input_0} -radix hex {4656f800 0ns}
+add_force {/GyroData_wrapper/Data_ready_in_0} -radix hex {1 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+open_bd_design {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}
+startgroup
+make_bd_pins_external  [get_bd_pins Sumering_0/test_inter]
+endgroup
+delete_bd_objs [get_bd_nets Kalddethvadduharlyst_0_data_output]
+startgroup
+make_bd_pins_external  [get_bd_pins Kalddethvadduharlyst_0/data_output]
+endgroup
+connect_bd_net [get_bd_pins FloatToInt_0/Data_input] [get_bd_pins Kalddethvadduharlyst_0/data_output]
+close_sim
+save_bd_design
+generate_target Simulation [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}]
+export_ip_user_files -of_objects [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}}] -directory {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files} -ipstatic_source_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/modelsim} {questa=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/questa} {riviera=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/riviera} {activehdl=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source GyroData_wrapper.tcl
+add_force {/GyroData_wrapper/Clk_0} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/GyroData_wrapper/Data_input_0} -radix hex {4656f800 0ns}
+add_force {/GyroData_wrapper/Data_ready_in_0} -radix hex {1 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+open_bd_design {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}
+update_module_reference GyroData_FloatToInt_0_0
+close_sim
+generate_target Simulation [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}]
+export_ip_user_files -of_objects [get_files {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files {{C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}}] -directory {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files} -ipstatic_source_dir {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/modelsim} {questa=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/questa} {riviera=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/riviera} {activehdl=C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source GyroData_wrapper.tcl
+add_force {/GyroData_wrapper/Clk_0} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/GyroData_wrapper/Data_input_0} -radix hex {4656f800 0ns}
+add_force {/GyroData_wrapper/Data_ready_in_0} -radix hex {1 0ns}
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+open_bd_design {C:/Users/gusta/Documents/Universitetet/P4/Projekt/DataProcessingModule/Nyt lort/GyroData/GyroData.srcs/sources_1/bd/GyroData/GyroData.bd}
+close_sim
+set_property top FloatToInt [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+source FloatToInt.tcl
+add_force {/FloatToInt/Data_input} -radix hex {399d1ff8 0ns}
+add_force {/FloatToInt/clk} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+add_force {/FloatToInt/Data_input} -radix hex {42E60000 0ns}
+run 10 ns
+relaunch_sim
+add_force {/FloatToInt/Data_input} -radix hex {42e60000 0ns}
+add_force {/FloatToInt/clk} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+relaunch_sim
+add_force {/FloatToInt/Data_input} -radix hex {42E60000 0ns}
+add_force {/FloatToInt/clk} -radix bin {0 0ns} {1 5000ps} -repeat_every 10000ps
+run 10 ns
+close_sim
+update_module_reference GyroData_FloatToInt_0_0
