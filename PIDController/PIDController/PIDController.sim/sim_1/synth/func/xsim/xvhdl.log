@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/d/Desktop/project_1/project_1.sim/sim_1/synth/func/xsim/PID_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Multiplikation'
+INFO: [VRFC 10-3107] analyzing entity 'Multiplikation_0'
+INFO: [VRFC 10-3107] analyzing entity 'Multiplikation_2'
+INFO: [VRFC 10-3107] analyzing entity 'bitToFloat'
+INFO: [VRFC 10-3107] analyzing entity 'bitToFloat_1'
+INFO: [VRFC 10-3107] analyzing entity 'bitToFloat_3'
+INFO: [VRFC 10-3107] analyzing entity 'PID'

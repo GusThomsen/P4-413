@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/AddSubFuntion.vhd" \
+"../../../../project_1.srcs/sources_1/new/FloatToBit.vhd" \
+"../../../../project_1.srcs/sources_1/new/Multiplikation.vhd" \
+"../../../../project_1.srcs/sources_1/new/bitToFloat.vhd" \
+"../../../../project_1.srcs/sources_1/new/Yeet.vhd" \
+
+# Do not sort compile order
+nosort
