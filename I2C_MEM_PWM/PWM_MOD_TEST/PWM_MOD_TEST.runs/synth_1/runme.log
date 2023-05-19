@@ -1,0 +1,288 @@
+
+*** Running vivado
+    with args -log PWM_BLOCK_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PWM_BLOCK_wrapper.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source PWM_BLOCK_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1001.121 ; gain = 117.316
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1030.926 ; gain = 29.805
+Command: read_checkpoint -auto_incremental -incremental C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/utils_1/imports/synth_1/PWM_BLOCK_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/utils_1/imports/synth_1/PWM_BLOCK_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top PWM_BLOCK_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18304
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1823.543 ; gain = 408.348
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PWM_BLOCK_wrapper' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:37]
+INFO: [Synth 8-3491] module 'IO_BLOCK' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/IO_BLOCK.vhd:34' bound to instance 'i_IO_BLOCK' of component 'IO_BLOCK' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'IO_BLOCK' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/IO_BLOCK.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'IO_BLOCK' (0#1) [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/IO_BLOCK.vhd:40]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'TriStateBuf' (0#1) [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:42]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-3491] module 'TriStateBuf' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:34' bound to instance 'i_tri_state' of component 'TriStateBuf' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:96]
+INFO: [Synth 8-3491] module 'PWM_BLOCK' declared at 'c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:14' bound to instance 'PWM_BLOCK_i' of component 'PWM_BLOCK' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:107]
+INFO: [Synth 8-638] synthesizing module 'PWM_BLOCK' [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:37]
+INFO: [Synth 8-3491] module 'PWM_BLOCK_BlockRAM_0_0' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_BlockRAM_0_0_stub.vhdl:5' bound to instance 'BlockRAM_0' of component 'PWM_BLOCK_BlockRAM_0_0' [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:223]
+INFO: [Synth 8-638] synthesizing module 'PWM_BLOCK_BlockRAM_0_0' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_BlockRAM_0_0_stub.vhdl:53]
+INFO: [Synth 8-3491] module 'PWM_BLOCK_BlockRamDummy_0_0' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_BlockRamDummy_0_0_stub.vhdl:5' bound to instance 'BlockRamDummy_0' of component 'PWM_BLOCK_BlockRamDummy_0_0' [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'PWM_BLOCK_BlockRamDummy_0_0' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_BlockRamDummy_0_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'PWM_BLOCK_I2CMaster_0_0' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_I2CMaster_0_0_stub.vhdl:5' bound to instance 'I2CMaster_0' of component 'PWM_BLOCK_I2CMaster_0_0' [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:296]
+INFO: [Synth 8-638] synthesizing module 'PWM_BLOCK_I2CMaster_0_0' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_I2CMaster_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'PWM_BLOCK_PWM_TEST_0_0' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_PWM_TEST_0_0_stub.vhdl:5' bound to instance 'PWM_TEST_0' of component 'PWM_BLOCK_PWM_TEST_0_0' [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:316]
+INFO: [Synth 8-638] synthesizing module 'PWM_BLOCK_PWM_TEST_0_0' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_PWM_TEST_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'PWM_BLOCK_clk_wiz_0_0' declared at 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'PWM_BLOCK_clk_wiz_0_0' [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:330]
+INFO: [Synth 8-638] synthesizing module 'PWM_BLOCK_clk_wiz_0_0' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/.Xil/Vivado-3080-DESKTOP-26ONRPF/realtime/PWM_BLOCK_clk_wiz_0_0_stub.vhdl:16]
+INFO: [Synth 8-256] done synthesizing module 'PWM_BLOCK' (0#1) [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/synth/PWM_BLOCK.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'PWM_BLOCK_wrapper' (0#1) [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/hdl/PWM_BLOCK_wrapper.vhd:37]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1916.062 ; gain = 500.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1916.062 ; gain = 500.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1916.062 ; gain = 500.867
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1916.062 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/clk_wiz_0'
+Finished Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/clk_wiz_0'
+Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_BlockRAM_0_0/PWM_BLOCK_BlockRAM_0_0/PWM_BLOCK_BlockRAM_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/BlockRAM_0'
+Finished Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_BlockRAM_0_0/PWM_BLOCK_BlockRAM_0_0/PWM_BLOCK_BlockRAM_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/BlockRAM_0'
+Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_PWM_TEST_0_0/PWM_BLOCK_PWM_TEST_0_0/PWM_BLOCK_PWM_TEST_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/PWM_TEST_0'
+Finished Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_PWM_TEST_0_0/PWM_BLOCK_PWM_TEST_0_0/PWM_BLOCK_PWM_TEST_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/PWM_TEST_0'
+Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_I2CMaster_0_0/PWM_BLOCK_I2CMaster_0_0/PWM_BLOCK_I2CMaster_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/I2CMaster_0'
+Finished Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_I2CMaster_0_0/PWM_BLOCK_I2CMaster_0_0/PWM_BLOCK_I2CMaster_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/I2CMaster_0'
+Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_BlockRamDummy_0_0/PWM_BLOCK_BlockRamDummy_0_0/PWM_BLOCK_BlockRamDummy_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/BlockRamDummy_0'
+Finished Parsing XDC File [c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_BlockRamDummy_0_0/PWM_BLOCK_BlockRamDummy_0_0/PWM_BLOCK_BlockRamDummy_0_0_in_context.xdc] for cell 'PWM_BLOCK_i/BlockRamDummy_0'
+Parsing XDC File [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/constrs_1/imports/Desktop/Cmod-A7-Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'RW_0_IBUF'. [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/constrs_1/imports/Desktop/Cmod-A7-Master.xdc:134]
+WARNING: [Vivado 12-507] No nets matched 'MCUCLK_0_IBUF'. [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/constrs_1/imports/Desktop/Cmod-A7-Master.xdc:135]
+Finished Parsing XDC File [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/constrs_1/imports/Desktop/Cmod-A7-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/constrs_1/imports/Desktop/Cmod-A7-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/PWM_BLOCK_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/constrs_1/imports/Desktop/Cmod-A7-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/PWM_BLOCK_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/PWM_BLOCK_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1969.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1969.355 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in1_0. (constraint file  c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1_0. (constraint file  c:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK/ip/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0/PWM_BLOCK_clk_wiz_0_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for PWM_BLOCK_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for PWM_BLOCK_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for PWM_BLOCK_i/BlockRAM_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for PWM_BLOCK_i/PWM_TEST_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for PWM_BLOCK_i/I2CMaster_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for PWM_BLOCK_i/BlockRamDummy_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'DataOut_reg' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:65]
+WARNING: [Synth 8-327] inferring latch for variable 'DataBus_IO_reg' [C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.srcs/sources_1/new/tri_state_buf.vhd:60]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (g_tri_state_buf[7].i_tri_state/DataBus_IO_reg) is unused and will be removed from module PWM_BLOCK_wrapper.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------+----------+
+|      |BlackBox name               |Instances |
++------+----------------------------+----------+
+|1     |PWM_BLOCK_BlockRAM_0_0      |         1|
+|2     |PWM_BLOCK_BlockRamDummy_0_0 |         1|
+|3     |PWM_BLOCK_I2CMaster_0_0     |         1|
+|4     |PWM_BLOCK_PWM_TEST_0_0      |         1|
+|5     |PWM_BLOCK_clk_wiz_0_0       |         1|
++------+----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |PWM_BLOCK_BlockRAM_0_0_bbox      |     1|
+|2     |PWM_BLOCK_BlockRamDummy_0_0_bbox |     1|
+|3     |PWM_BLOCK_I2CMaster_0_0_bbox     |     1|
+|4     |PWM_BLOCK_PWM_TEST_0_0_bbox      |     1|
+|5     |PWM_BLOCK_clk_wiz_0_0_bbox       |     1|
+|6     |BUFG                             |     1|
+|7     |LUT1                             |     9|
+|8     |LUT2                             |     8|
+|9     |LD                               |    16|
+|10    |IBUF                             |     7|
+|11    |IOBUF                            |     9|
+|12    |OBUF                             |     6|
++------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 1969.355 ; gain = 500.867
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1969.355 ; gain = 554.160
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1969.355 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 8 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1969.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 25 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 9 instances
+  LD => LDCE: 8 instances
+  LD => LDCE (inverted pins: G): 8 instances
+
+Synth Design complete, checksum: 964dca84
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1969.355 ; gain = 934.414
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jakob/PWM_MOD_TEST/PWM_MOD_TEST.runs/synth_1/PWM_BLOCK_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file PWM_BLOCK_wrapper_utilization_synth.rpt -pb PWM_BLOCK_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 10 11:01:08 2023...

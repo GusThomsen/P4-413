@@ -1,0 +1,83 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.43442",
+   "Default View_TopLeft":"-566,-520",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk_in1_0 -pg 1 -lvl 0 -x -420 -y -460 -defaultsOSRD
+preplace port port-id_pwm_out_3_0 -pg 1 -lvl 4 -x 1340 -y -90 -defaultsOSRD
+preplace port port-id_pwm_out_1_0 -pg 1 -lvl 4 -x 1340 -y -130 -defaultsOSRD
+preplace port port-id_pwm_out_2_0 -pg 1 -lvl 4 -x 1340 -y -110 -defaultsOSRD
+preplace port port-id_pwm_out_4_0 -pg 1 -lvl 4 -x 1340 -y -70 -defaultsOSRD
+preplace port port-id_RW_0 -pg 1 -lvl 0 -x -420 -y 440 -defaultsOSRD
+preplace port port-id_MCUCLK_0 -pg 1 -lvl 0 -x -420 -y 400 -defaultsOSRD
+preplace port port-id_SDA_INPUT_0 -pg 1 -lvl 0 -x -420 -y -310 -defaultsOSRD
+preplace port port-id_SDA_OUTPUT_0 -pg 1 -lvl 4 -x 1340 -y -370 -defaultsOSRD
+preplace port port-id_SCL_OUTPUT_0 -pg 1 -lvl 4 -x 1340 -y -350 -defaultsOSRD
+preplace port port-id_DATA_VALID_0 -pg 1 -lvl 4 -x 1340 -y -330 -defaultsOSRD
+preplace portBus DataIn_0 -pg 1 -lvl 0 -x -420 -y 460 -defaultsOSRD
+preplace portBus Addr_0 -pg 1 -lvl 0 -x -420 -y 420 -defaultsOSRD
+preplace portBus DataOut_0 -pg 1 -lvl 4 -x 1340 -y 140 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 700 -y -440 -defaultsOSRD
+preplace inst BlockRAM_0 -pg 1 -lvl 1 -x 220 -y 460 -defaultsOSRD
+preplace inst PWM_TEST_0 -pg 1 -lvl 3 -x 950 -y -100 -defaultsOSRD
+preplace inst I2CMaster_0 -pg 1 -lvl 1 -x 220 -y -310 -defaultsOSRD
+preplace inst BlockRamDummy_0 -pg 1 -lvl 2 -x 700 -y 520 -defaultsOSRD
+preplace netloc Addr_0_1 1 0 1 NJ 420
+preplace netloc BlockRAM_0_DataOut 1 1 3 NJ 140 NJ 140 N
+preplace netloc BlockRAM_0_DataReg0 1 1 2 430 -100 NJ
+preplace netloc BlockRAM_0_DataReg1 1 1 2 450 -80 NJ
+preplace netloc BlockRAM_0_DataReg10O 1 1 1 N 360
+preplace netloc BlockRAM_0_DataReg11O 1 1 1 N 380
+preplace netloc BlockRAM_0_DataReg12O 1 1 1 N 400
+preplace netloc BlockRAM_0_DataReg2 1 1 2 470 -60 NJ
+preplace netloc BlockRAM_0_DataReg3 1 1 2 480 -40 NJ
+preplace netloc BlockRAM_0_DataReg4 1 1 2 440 -140 NJ
+preplace netloc BlockRAM_0_DataReg5 1 1 2 460 -120 NJ
+preplace netloc BlockRAM_0_DataReg6 1 1 1 N 280
+preplace netloc BlockRAM_0_DataReg7 1 1 1 N 300
+preplace netloc BlockRAM_0_DataReg8 1 1 1 N 320
+preplace netloc BlockRAM_0_DataReg13 1 1 1 N 420
+preplace netloc BlockRAM_0_DataReg14 1 1 1 N 440
+preplace netloc BlockRAM_0_DataReg15 1 1 1 N 460
+preplace netloc BlockRAM_0_DataReg16 1 1 1 N 480
+preplace netloc BlockRAM_0_DataReg17 1 1 1 N 500
+preplace netloc BlockRAM_0_DataReg18 1 1 1 N 520
+preplace netloc BlockRAM_0_DataReg19 1 1 1 N 540
+preplace netloc BlockRAM_0_DataReg20 1 1 1 N 560
+preplace netloc BlockRAM_0_DataReg21 1 1 1 N 580
+preplace netloc BlockRAM_0_DataReg22 1 1 1 N 600
+preplace netloc BlockRAM_0_DataReg23 1 1 1 N 620
+preplace netloc BlockRAM_0_DataReg24 1 1 1 N 640
+preplace netloc BlockRAM_0_DataReg26 1 1 1 430 660n
+preplace netloc BlockRAM_0_DataReg27 1 1 1 440 680n
+preplace netloc BlockRAM_0_DataReg28 1 1 1 450 700n
+preplace netloc BlockRAM_0_DataReg29 1 1 1 460 720n
+preplace netloc BlockRAM_0_DataReg30 1 1 1 470 740n
+preplace netloc BlockRAM_0_DataReg31 1 1 1 480 760n
+preplace netloc BlockRAM_0_DataReg9O 1 1 1 N 340
+preplace netloc DataIn_0_1 1 0 1 NJ 460
+preplace netloc MCUCLK_0_1 1 0 1 NJ 400
+preplace netloc PWM_TEST_0_PWM0 1 3 1 N -130
+preplace netloc PWM_TEST_0_PWM1 1 3 1 N -110
+preplace netloc PWM_TEST_0_PWM2 1 3 1 N -90
+preplace netloc PWM_TEST_0_PWM3 1 3 1 N -70
+preplace netloc RW_0_1 1 0 1 NJ 440
+preplace netloc clk_in1_0_1 1 0 2 -400 -470 480
+preplace netloc clk_wiz_0_clk_out1 1 0 3 -350 -160 N -160 820
+preplace netloc clk_wiz_0_clk_out2 1 0 3 -360 -450 470J -360 810
+preplace netloc SDA_INPUT_0_1 1 0 1 NJ -310
+preplace netloc BlockRAM_0_DataReg25 1 0 2 -350 -440 420
+preplace netloc I2CMaster_0_X_GYRO_DATA_L 1 0 2 -390 -460 410
+preplace netloc I2CMaster_0_X_GYRO_DATA_H 1 0 2 -370 -430 400
+preplace netloc I2CMaster_0_Z_GYRO_DATA_L 1 0 2 -360 -180 410
+preplace netloc I2CMaster_0_Z_GYRO_DATA_H 1 0 2 -380 -190 400
+preplace netloc I2CMaster_0_SDA_OUTPUT 1 1 3 460J -340 830J -370 NJ
+preplace netloc I2CMaster_0_SCL_OUTPUT 1 1 3 NJ -350 NJ -350 NJ
+preplace netloc I2CMaster_0_DATA_VALID 1 1 3 NJ -330 NJ -330 NJ
+levelinfo -pg 1 -420 220 700 950 1340
+pagesize -pg 1 -db -bbox -sgen -570 -940 1510 860
+"
+}
+0

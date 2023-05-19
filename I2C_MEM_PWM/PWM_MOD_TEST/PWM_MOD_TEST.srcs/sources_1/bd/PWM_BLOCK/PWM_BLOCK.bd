@@ -1,0 +1,985 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x82A7827B24AC35C1",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../PWM_MOD_TEST.gen/sources_1/bd/PWM_BLOCK",
+      "name": "PWM_BLOCK",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "BlockRAM_0": "",
+      "PWM_TEST_0": "",
+      "I2CMaster_0": "",
+      "BlockRamDummy_0": ""
+    },
+    "ports": {
+      "clk_in1_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "PWM_BLOCK_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "12000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "pwm_out_3_0": {
+        "direction": "O"
+      },
+      "pwm_out_1_0": {
+        "direction": "O"
+      },
+      "pwm_out_2_0": {
+        "direction": "O"
+      },
+      "pwm_out_4_0": {
+        "direction": "O"
+      },
+      "DataIn_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "RW_0": {
+        "direction": "I"
+      },
+      "Addr_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "MCUCLK_0": {
+        "direction": "I"
+      },
+      "DataOut_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "SDA_INPUT_0": {
+        "direction": "I"
+      },
+      "SDA_OUTPUT_0": {
+        "direction": "O"
+      },
+      "SCL_OUTPUT_0": {
+        "direction": "O"
+      },
+      "DATA_VALID_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "PWM_BLOCK_clk_wiz_0_0",
+        "xci_path": "ip\\PWM_BLOCK_clk_wiz_0_0\\PWM_BLOCK_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "833.33"
+          },
+          "CLKIN2_JITTER_PS": {
+            "value": "1000.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "450.784"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "686.541"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "168"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "680.336"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "686.541"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "12"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "63.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "83.333"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "4.500"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "63"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "12"
+          },
+          "SECONDARY_IN_FREQ": {
+            "value": "100.000"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_INCLK_SWITCHOVER": {
+            "value": "false"
+          }
+        }
+      },
+      "BlockRAM_0": {
+        "vlnv": "xilinx.com:module_ref:BlockRAM:1.0",
+        "xci_name": "PWM_BLOCK_BlockRAM_0_0",
+        "xci_path": "ip\\PWM_BLOCK_BlockRAM_0_0\\PWM_BLOCK_BlockRAM_0_0.xci",
+        "inst_hier_path": "BlockRAM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BlockRAM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "SYSCLK": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "168000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MCUCLK": {
+            "direction": "I"
+          },
+          "Addr": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "RW": {
+            "direction": "I"
+          },
+          "DataIn": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DataOut": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "I_DataReg9": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "I_DataReg10": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "I_DataReg11": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "I_DataReg12": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg0": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg1": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg2": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg3": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg4": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg5": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg6": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg7": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg8": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg9O": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg10O": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg11O": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg12O": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg13": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg14": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg15": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg16": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg17": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg18": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg19": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg20": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg21": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg22": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg23": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg24": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg25": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg26": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg27": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg28": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg29": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg30": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "DataReg31": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "PWM_TEST_0": {
+        "vlnv": "xilinx.com:module_ref:PWM_TEST:1.0",
+        "xci_name": "PWM_BLOCK_PWM_TEST_0_0",
+        "xci_path": "ip\\PWM_BLOCK_PWM_TEST_0_0\\PWM_BLOCK_PWM_TEST_0_0.xci",
+        "inst_hier_path": "PWM_TEST_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PWM_TEST",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Main_CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "168000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "frq0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "frq1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DCY0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DCY1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DCY2": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "DCY3": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "PWM0": {
+            "direction": "O"
+          },
+          "PWM1": {
+            "direction": "O"
+          },
+          "PWM2": {
+            "direction": "O"
+          },
+          "PWM3": {
+            "direction": "O"
+          }
+        }
+      },
+      "I2CMaster_0": {
+        "vlnv": "xilinx.com:module_ref:I2CMaster:1.0",
+        "xci_name": "PWM_BLOCK_I2CMaster_0_0",
+        "xci_path": "ip\\PWM_BLOCK_I2CMaster_0_0\\PWM_BLOCK_I2CMaster_0_0.xci",
+        "inst_hier_path": "I2CMaster_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "I2CMaster",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "I2C_MASTER_CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "12000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "SDA_OUTPUT": {
+            "direction": "O"
+          },
+          "SDA_INPUT": {
+            "direction": "I"
+          },
+          "SCL_OUTPUT": {
+            "direction": "O"
+          },
+          "DATA_VALID": {
+            "direction": "O"
+          },
+          "ADDR_1": {
+            "direction": "I",
+            "left": "0",
+            "right": "7"
+          },
+          "X_GYRO_DATA_L": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "X_GYRO_DATA_H": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "Z_GYRO_DATA_L": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "Z_GYRO_DATA_H": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "BlockRamDummy_0": {
+        "vlnv": "xilinx.com:module_ref:BlockRamDummy:1.0",
+        "xci_name": "PWM_BLOCK_BlockRamDummy_0_0",
+        "xci_path": "ip\\PWM_BLOCK_BlockRamDummy_0_0\\PWM_BLOCK_BlockRamDummy_0_0.xci",
+        "inst_hier_path": "BlockRamDummy_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BlockRamDummy",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Port_6": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_7": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_8": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_9": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_10": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_11": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_12": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_13": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_14": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_15": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_16": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_17": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_18": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_19": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_20": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_21": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_22": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_23": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_24": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_26": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_27": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_28": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_29": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_30": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Port_31": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Addr_0_1": {
+        "ports": [
+          "Addr_0",
+          "BlockRAM_0/Addr"
+        ]
+      },
+      "BlockRAM_0_DataOut": {
+        "ports": [
+          "BlockRAM_0/DataOut",
+          "DataOut_0"
+        ]
+      },
+      "BlockRAM_0_DataReg0": {
+        "ports": [
+          "BlockRAM_0/DataReg0",
+          "PWM_TEST_0/DCY0"
+        ]
+      },
+      "BlockRAM_0_DataReg1": {
+        "ports": [
+          "BlockRAM_0/DataReg1",
+          "PWM_TEST_0/DCY1"
+        ]
+      },
+      "BlockRAM_0_DataReg10O": {
+        "ports": [
+          "BlockRAM_0/DataReg10O",
+          "BlockRamDummy_0/Port_10"
+        ]
+      },
+      "BlockRAM_0_DataReg11O": {
+        "ports": [
+          "BlockRAM_0/DataReg11O",
+          "BlockRamDummy_0/Port_11"
+        ]
+      },
+      "BlockRAM_0_DataReg12O": {
+        "ports": [
+          "BlockRAM_0/DataReg12O",
+          "BlockRamDummy_0/Port_12"
+        ]
+      },
+      "BlockRAM_0_DataReg2": {
+        "ports": [
+          "BlockRAM_0/DataReg2",
+          "PWM_TEST_0/DCY2"
+        ]
+      },
+      "BlockRAM_0_DataReg3": {
+        "ports": [
+          "BlockRAM_0/DataReg3",
+          "PWM_TEST_0/DCY3"
+        ]
+      },
+      "BlockRAM_0_DataReg4": {
+        "ports": [
+          "BlockRAM_0/DataReg4",
+          "PWM_TEST_0/frq0"
+        ]
+      },
+      "BlockRAM_0_DataReg5": {
+        "ports": [
+          "BlockRAM_0/DataReg5",
+          "PWM_TEST_0/frq1"
+        ]
+      },
+      "BlockRAM_0_DataReg6": {
+        "ports": [
+          "BlockRAM_0/DataReg6",
+          "BlockRamDummy_0/Port_6"
+        ]
+      },
+      "BlockRAM_0_DataReg7": {
+        "ports": [
+          "BlockRAM_0/DataReg7",
+          "BlockRamDummy_0/Port_7"
+        ]
+      },
+      "BlockRAM_0_DataReg8": {
+        "ports": [
+          "BlockRAM_0/DataReg8",
+          "BlockRamDummy_0/Port_8"
+        ]
+      },
+      "BlockRAM_0_DataReg13": {
+        "ports": [
+          "BlockRAM_0/DataReg13",
+          "BlockRamDummy_0/Port_13"
+        ]
+      },
+      "BlockRAM_0_DataReg14": {
+        "ports": [
+          "BlockRAM_0/DataReg14",
+          "BlockRamDummy_0/Port_14"
+        ]
+      },
+      "BlockRAM_0_DataReg15": {
+        "ports": [
+          "BlockRAM_0/DataReg15",
+          "BlockRamDummy_0/Port_15"
+        ]
+      },
+      "BlockRAM_0_DataReg16": {
+        "ports": [
+          "BlockRAM_0/DataReg16",
+          "BlockRamDummy_0/Port_16"
+        ]
+      },
+      "BlockRAM_0_DataReg17": {
+        "ports": [
+          "BlockRAM_0/DataReg17",
+          "BlockRamDummy_0/Port_17"
+        ]
+      },
+      "BlockRAM_0_DataReg18": {
+        "ports": [
+          "BlockRAM_0/DataReg18",
+          "BlockRamDummy_0/Port_18"
+        ]
+      },
+      "BlockRAM_0_DataReg19": {
+        "ports": [
+          "BlockRAM_0/DataReg19",
+          "BlockRamDummy_0/Port_19"
+        ]
+      },
+      "BlockRAM_0_DataReg20": {
+        "ports": [
+          "BlockRAM_0/DataReg20",
+          "BlockRamDummy_0/Port_20"
+        ]
+      },
+      "BlockRAM_0_DataReg21": {
+        "ports": [
+          "BlockRAM_0/DataReg21",
+          "BlockRamDummy_0/Port_21"
+        ]
+      },
+      "BlockRAM_0_DataReg22": {
+        "ports": [
+          "BlockRAM_0/DataReg22",
+          "BlockRamDummy_0/Port_22"
+        ]
+      },
+      "BlockRAM_0_DataReg23": {
+        "ports": [
+          "BlockRAM_0/DataReg23",
+          "BlockRamDummy_0/Port_23"
+        ]
+      },
+      "BlockRAM_0_DataReg24": {
+        "ports": [
+          "BlockRAM_0/DataReg24",
+          "BlockRamDummy_0/Port_24"
+        ]
+      },
+      "BlockRAM_0_DataReg25": {
+        "ports": [
+          "BlockRAM_0/DataReg25",
+          "I2CMaster_0/ADDR_1"
+        ]
+      },
+      "BlockRAM_0_DataReg26": {
+        "ports": [
+          "BlockRAM_0/DataReg26",
+          "BlockRamDummy_0/Port_26"
+        ]
+      },
+      "BlockRAM_0_DataReg27": {
+        "ports": [
+          "BlockRAM_0/DataReg27",
+          "BlockRamDummy_0/Port_27"
+        ]
+      },
+      "BlockRAM_0_DataReg28": {
+        "ports": [
+          "BlockRAM_0/DataReg28",
+          "BlockRamDummy_0/Port_28"
+        ]
+      },
+      "BlockRAM_0_DataReg29": {
+        "ports": [
+          "BlockRAM_0/DataReg29",
+          "BlockRamDummy_0/Port_29"
+        ]
+      },
+      "BlockRAM_0_DataReg30": {
+        "ports": [
+          "BlockRAM_0/DataReg30",
+          "BlockRamDummy_0/Port_30"
+        ]
+      },
+      "BlockRAM_0_DataReg31": {
+        "ports": [
+          "BlockRAM_0/DataReg31",
+          "BlockRamDummy_0/Port_31"
+        ]
+      },
+      "BlockRAM_0_DataReg9O": {
+        "ports": [
+          "BlockRAM_0/DataReg9O",
+          "BlockRamDummy_0/Port_9"
+        ]
+      },
+      "DataIn_0_1": {
+        "ports": [
+          "DataIn_0",
+          "BlockRAM_0/DataIn"
+        ]
+      },
+      "I2CMaster_0_DATA_VALID": {
+        "ports": [
+          "I2CMaster_0/DATA_VALID",
+          "DATA_VALID_0"
+        ]
+      },
+      "I2CMaster_0_SCL_OUTPUT": {
+        "ports": [
+          "I2CMaster_0/SCL_OUTPUT",
+          "SCL_OUTPUT_0"
+        ]
+      },
+      "I2CMaster_0_SDA_OUTPUT": {
+        "ports": [
+          "I2CMaster_0/SDA_OUTPUT",
+          "SDA_OUTPUT_0"
+        ]
+      },
+      "I2CMaster_0_X_GYRO_DATA_H": {
+        "ports": [
+          "I2CMaster_0/X_GYRO_DATA_H",
+          "BlockRAM_0/I_DataReg10"
+        ]
+      },
+      "I2CMaster_0_X_GYRO_DATA_L": {
+        "ports": [
+          "I2CMaster_0/X_GYRO_DATA_L",
+          "BlockRAM_0/I_DataReg9"
+        ]
+      },
+      "I2CMaster_0_Z_GYRO_DATA_H": {
+        "ports": [
+          "I2CMaster_0/Z_GYRO_DATA_H",
+          "BlockRAM_0/I_DataReg12"
+        ]
+      },
+      "I2CMaster_0_Z_GYRO_DATA_L": {
+        "ports": [
+          "I2CMaster_0/Z_GYRO_DATA_L",
+          "BlockRAM_0/I_DataReg11"
+        ]
+      },
+      "MCUCLK_0_1": {
+        "ports": [
+          "MCUCLK_0",
+          "BlockRAM_0/MCUCLK"
+        ]
+      },
+      "PWM_TEST_0_PWM0": {
+        "ports": [
+          "PWM_TEST_0/PWM0",
+          "pwm_out_1_0"
+        ]
+      },
+      "PWM_TEST_0_PWM1": {
+        "ports": [
+          "PWM_TEST_0/PWM1",
+          "pwm_out_2_0"
+        ]
+      },
+      "PWM_TEST_0_PWM2": {
+        "ports": [
+          "PWM_TEST_0/PWM2",
+          "pwm_out_3_0"
+        ]
+      },
+      "PWM_TEST_0_PWM3": {
+        "ports": [
+          "PWM_TEST_0/PWM3",
+          "pwm_out_4_0"
+        ]
+      },
+      "RW_0_1": {
+        "ports": [
+          "RW_0",
+          "BlockRAM_0/RW"
+        ]
+      },
+      "SDA_INPUT_0_1": {
+        "ports": [
+          "SDA_INPUT_0",
+          "I2CMaster_0/SDA_INPUT"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk_in1_0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "BlockRAM_0/SYSCLK",
+          "PWM_TEST_0/Main_CLK"
+        ]
+      },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "I2CMaster_0/I2C_MASTER_CLK"
+        ]
+      }
+    }
+  }
+}

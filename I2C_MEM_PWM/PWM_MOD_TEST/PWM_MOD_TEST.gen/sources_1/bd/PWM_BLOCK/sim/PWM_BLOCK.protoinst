@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"PWM_BLOCK": {
+			"proto_instances": {
+			}
+		}
+	}
+}
